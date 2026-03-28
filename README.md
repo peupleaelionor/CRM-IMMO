@@ -12,7 +12,7 @@ Ajoutez ces deux **secrets** dans **Settings → Secrets and variables → Actio
 
 | Secret               | Description                                                                 |
 | -------------------- | --------------------------------------------------------------------------- |
-| `NETLIFY_AUTH_TOKEN`  | Token d'accès personnel Netlify ([créer ici](https://app.netlify.com/user/applications#personal-access-tokens)) |
+| `NETLIFY_AUTH_TOKEN`  | Token d'accès personnel Netlify ([créer ici](https://app.netlify.com/user/applications/personal)) |
 | `NETLIFY_SITE_ID`    | ID du site Netlify (visible dans **Site configuration → General**)          |
 
 ### Étapes de configuration
@@ -20,7 +20,7 @@ Ajoutez ces deux **secrets** dans **Settings → Secrets and variables → Actio
 1. **Créer un site sur Netlify** :
    - Allez sur [app.netlify.com](https://app.netlify.com)
    - Cliquez sur **Add new site → Import an existing project**
-   - Connectez votre dépôt GitHub `peupleaelionor/CRM-IMMO`
+   - Connectez votre dépôt GitHub
    - **Build command** : _(laisser vide)_
    - **Publish directory** : `.`
    - Cliquez **Deploy site**
