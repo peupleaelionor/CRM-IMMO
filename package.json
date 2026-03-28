@@ -1,0 +1,12 @@
+{
+  "name": "crm-immo-pro",
+  "version": "1.0.0",
+  "description": "CRM Immo Pro — Comparatif SaaS pour l'immobilier",
+  "private": true,
+  "scripts": {
+    "serve": "npx serve .",
+    "preview": "npx serve . -l 3000"
+  },
+  "keywords": ["crm", "immobilier", "saas", "comparatif"],
+  "license": "UNLICENSED"
+}

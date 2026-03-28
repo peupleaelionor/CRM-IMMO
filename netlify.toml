@@ -1,0 +1,25 @@
+[build]
+  # No build command needed — the site is pre-built static files
+  publish = "."
+
+# SPA redirect: serve index.html for all routes not matching a file
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security & performance headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    X-XSS-Protection = "1; mode=block"
+
+# Long-term caching for hashed assets (CSS/JS)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
