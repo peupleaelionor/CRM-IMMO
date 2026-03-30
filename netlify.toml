@@ -1,6 +1,6 @@
 [build]
-  # No build command needed — the site is pre-built static files
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
 # SPA redirect: serve index.html for all routes not matching a file
 [[redirects]]

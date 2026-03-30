@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: 220 25% 5%;
+  --foreground: 0 0% 98%;
+  --card: 220 20% 8%;
+  --card-foreground: 0 0% 98%;
+  --popover: 220 20% 8%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 45 100% 50%;
+  --primary-foreground: 220 25% 5%;
+  --secondary: 220 15% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 220 15% 15%;
+  --muted-foreground: 220 10% 60%;
+  --accent: 142 70% 45%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 15% 18%;
+  --input: 220 15% 18%;
+  --ring: 45 100% 50%;
+  --radius: 0.75rem;
+  --warning-bg: 0 70% 15%;
+  --warning-border: 0 70% 35%;
+  --success: 142 70% 45%;
+  --expert: 45 100% 50%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glass morphism utility */
+.bg-glass {
+  background: hsl(var(--card));
+  backdrop-filter: blur(12px);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.15);
+}
