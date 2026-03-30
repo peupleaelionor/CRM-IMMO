@@ -5,7 +5,7 @@ import { DashboardPage } from './pages/DashboardPage'
 import { ContactsPage } from './pages/ContactsPage'
 import { PropertiesPage } from './pages/PropertiesPage'
 import { DealsPage } from './pages/DealsPage'
-import { MatchingPage } from './pages/MatchingPage'
+import MatchingPage from './pages/MatchingPage'
 
 export function App() {
   return (

@@ -8,10 +8,13 @@ Thumbs.db
 *.swp
 *.swo
 
-# Node (if future development is added)
+# Node
 node_modules/
 .env
 .env.local
+
+# Build output
+dist/
 
 # Netlify
 .netlify/
