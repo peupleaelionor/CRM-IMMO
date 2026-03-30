@@ -21,8 +21,8 @@ Ajoutez ces deux **secrets** dans **Settings → Secrets and variables → Actio
    - Allez sur [app.netlify.com](https://app.netlify.com)
    - Cliquez sur **Add new site → Import an existing project**
    - Connectez votre dépôt GitHub
-   - **Build command** : _(laisser vide)_
-   - **Publish directory** : `.`
+   - **Build command** : `npm run build`
+   - **Publish directory** : `dist`
    - Cliquez **Deploy site**
 
 2. **Récupérer le Site ID** :
@@ -45,13 +45,16 @@ Ajoutez ces deux **secrets** dans **Settings → Secrets and variables → Actio
 ```
 .
 ├── index.html                  # Point d'entrée HTML
-├── assets/
-│   ├── index-nETnyDg3.js       # Application React (bundle Vite)
-│   └── index-B-458coi.css      # Styles (Tailwind CSS)
-├── netlify.toml                # Configuration Netlify
-├── _redirects                  # Redirections SPA
-├── _headers                    # En-têtes HTTP sécurité/performance
-├── package.json                # Métadonnées du projet
+├── src/
+│   ├── main.tsx                # Point d'entrée React
+│   ├── App.tsx                 # Composant principal (toutes les sections)
+│   └── index.css               # Styles globaux + variables CSS
+├── public/
+│   └── favicon.svg             # Favicon
+├── vite.config.ts              # Configuration Vite + Tailwind CSS
+├── tsconfig.json               # Configuration TypeScript
+├── netlify.toml                # Configuration Netlify (build + headers)
+├── package.json                # Dépendances et scripts
 └── .github/
     └── workflows/
         └── netlify-deploy.yml  # Déploiement automatique via GitHub Actions
@@ -70,7 +73,16 @@ Les en-têtes de sécurité suivants sont automatiquement appliqués :
 ## 🏃 Développement local
 
 ```bash
-npx serve .
+npm install
+npm run dev
 ```
 
-Le site sera accessible sur `http://localhost:3000`.
+Le site sera accessible sur `http://localhost:5173`.
+
+## 🔨 Build
+
+```bash
+npm run build
+```
+
+Les fichiers de production sont générés dans le dossier `dist/`.
